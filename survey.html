@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="intial-scale=1.0, user-scalable=yes" />
+    <title>Video Game Survey</title>
+    <!-- Changes the background colour -->
+    <style>
+      body {
+        background-color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title of the webpage -->
+    <header>
+    <h1>Take A Survey About Video Games</h1>
+    </header>
+    <!-- Section title -->
+    <fieldset>
+      <legend>Personal Information</legend>
+        <form survery="/survey_page.php" method="get">
+          <!-- This is for getting the username of the user -->
+          <b><label for="username">Username:</label></b>
+          <input type="text" id="usernmae" name="f-name" maxlength="12" /><br /><br />
+
+          <!-- This is for getting the password of the user -->
+          <b><label for="password">Password:</label></b>
+          <input type="password" id="password" name="password" minlength="6" maxlength="20" /><br /><br />
+
+          <!-- This lets the user input a email address -->
+          <b><label for="email">Email:</label></b>
+          <input type="email" id="email" name="email" /><br /><br />
+    </fieldset>
+    <fieldset>
+      <legend>Age Select</legend>
+        <!-- This allows them to select their age range -->
+        <b><p>Please select your age:</p></b>
+        <input type="radio" id="young" name="young">
+        <label for="young">0 - 30</label><br>
+        <input type="radio" id="middle-age" name="middle-age">
+        <label for="middle-age">31 - 60</label><br>  
+        <input type="radio" id="old" name="old">
+        <label for="old">61 - 100</label><br><br>
+    </fieldset>
+    <fieldset>
+      <legend>Favourite Game And Genre</legend>
+        <!-- This allows them to tell us what their favourite game is -->
+        <b><label for="favourite-game">What is your favourite game?</label></b><br/>
+        <textarea id="favourite-game" name="favourite-game" rows="4" cols="30"></textarea><br/>
+
+        <!-- Lets them choose what their favourite video game genre is out of these three -->
+        <b><p>What Is Your Favourite Game Genre?</p></b>
+        <input type="radio" id="sandbox" name="sandbox">
+        <label for="sandbox">Sandbox</label><br>
+        <input type="radio" id="moba" name="moba">
+        <label for="moba">Multiplayer online battle arena</label><br>  
+        <input type="radio" id="rpg" name="rpg">
+        <label for="rpg">Role-Playing Games</label><br><br>
+
+    </fieldset>
+      <!-- Lets the user rate the survey on a 1-10 rating system -->
+      <label for="points">How Would You Rate This Survey (between 0 and 10):</label>
+      <input type="range" id="points" name="points" min="0" max="10"><br/>
+
+      <input type="submit" value="Submit"><br/>
+    </form>
+    <!-- Links to other webpages -->
+    <a href="index.html">Return to The Homepage</a>
+  </body>
+</html>
